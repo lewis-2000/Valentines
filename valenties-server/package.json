@@ -1,0 +1,27 @@
+{
+  "name": "vite-ts-api",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2",
+    "rimraf": "^4.1.2",
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "clean": "rimraf dist",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
